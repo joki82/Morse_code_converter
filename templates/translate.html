@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Morse code converter</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="static/favicon.ico">
+</head>
+<body>
+<div class="table" style="overflow-x:auto;">
+
+    <table style="width:100%">
+        <tr>
+            {% for letter in word: %}
+            <th>{{ letter }}</th>
+            {% endfor %}
+        </tr>
+
+        <tr>
+            {% for code in morse: %}
+            <td>{{ code }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+    <a href="{{ url_for('home') }}">Back to translator</a>
+</div>
+</body>
+</html>
